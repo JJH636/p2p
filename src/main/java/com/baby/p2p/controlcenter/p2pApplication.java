@@ -1,13 +1,11 @@
-package com.baby.p2p;
+package com.baby.p2p.controlcenter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class P2pApplication {
-
+public class p2pApplication {
     public static void main(String[] args) {
-        SpringApplication.run(P2pApplication.class, args);
+        SpringApplication.run(p2pApplication.class,args);
     }
-
 }
