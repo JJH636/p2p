@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baby.p2p.dao.RepaymentDetailMapper">
+
+    <select id="getRepaymentDetailList" resultType="com.baby.p2p.pojo.RepaymentDetail" >
+        SELECT (SELECT realname FROM t_user_info WHERE account_id = borrow_user_id),borrow_title,
+        (SELECT year_rate FROM t_bid WHERE id = bid_id),total_amount,repayment_type,period FROM t_repayment_detail
+    </select>
+
+</mapper>
