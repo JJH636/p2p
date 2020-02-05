@@ -2,6 +2,7 @@ package com.baby.p2p.controlcenter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import redis.clients.jedis.JedisPool;
 
 @SpringBootApplication
 public class p2pApplication {
