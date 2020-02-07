@@ -32,6 +32,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+        <!-- mybatis整合Springboot -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.1.1</version>
+        </dependency>
         <!-- START lombok 简化Java代码  START-->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -39,8 +45,6 @@
             <optional>true</optional>
         </dependency>
         <!-- END lombok 简化Java代码  END-->
-
-
         <!--MySql jdbc驱动-->
         <dependency>
             <groupId>mysql</groupId>
@@ -69,6 +73,11 @@
         </dependency>
         <!--=============END==============-->
         <!--START ==== Jedis所需要的依赖 ==== START-->
+        <!--集成redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-pool2</artifactId>
@@ -78,6 +87,11 @@
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
             <version>2.7.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>1.2.12</version>
         </dependency>
         <!--END ==== Jedis所需要的依赖 ==== END-->
         <dependency>
