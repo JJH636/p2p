@@ -1,4 +1,4 @@
-package com.baby.p2p.service.User;
+package com.baby.p2p.service.user;
 
 import com.baby.p2p.pojo.UserInfo;
 
