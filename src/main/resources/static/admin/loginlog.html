@@ -214,15 +214,15 @@ function fillLoginLogTable( listData ) {
         let loginLog = listData[i];
 
         let tdUsername = '<td>' + loginLog.username + '</td>';
-        let tdLoginTime = '<td>' + loginLog.loginTime + '</td>';
+        let tdLoginTime = '<td>' + loginLog.login_time + '</td>';
         let tdIp = '<td>' + loginLog.ip + '</td>';
 
         // 登录状态
-        let loginResult = LOGIN_RESULT[loginLog.loginResult];
+        let loginResult = LOGIN_RESULT[loginLog.login_result];
         let tdLoginResult = '<td>' + loginResult + '</td>';
 
         // 用户类型
-		let accountType = ACCOUNT_TYPE[loginLog.accountType];
+		let accountType = ACCOUNT_TYPE[loginLog.account_type];
 		let tdAccountType = '<td>' + accountType + '</td>';
 
         // 将构造好的单元格数据，填充到表格中

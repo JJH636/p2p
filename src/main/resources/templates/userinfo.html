@@ -257,6 +257,8 @@ if(!jsonUser) window.location.href = 'index.html';
 // 如果用户已经登录，则解析出user对象
 let user = JSON.parse(jsonUser);
 
+$("#username").text(user.username);
+
 $(function(){
 
 	// 加载公共顶部模板

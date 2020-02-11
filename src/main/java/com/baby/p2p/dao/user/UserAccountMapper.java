@@ -1,4 +1,4 @@
-package com.baby.p2p.dao;
+package com.baby.p2p.dao.user;
 
 import com.baby.p2p.pojo.UserAccount;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
