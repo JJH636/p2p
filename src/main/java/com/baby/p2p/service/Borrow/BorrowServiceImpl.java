@@ -1,6 +1,5 @@
 package com.baby.p2p.service.Borrow;
 
-
 import com.baby.p2p.dao.Borrow.BorrowMapper;
 import com.baby.p2p.pojo.Bid;
 import com.baby.p2p.pojo.Borrow;
@@ -18,8 +17,8 @@ public class BorrowServiceImpl implements BorrowService{
 
     //查询借款信息
     @Override
-    public List<Borrow> getBorrowListLimit(Map<String,Object> map) {
-        List<Borrow> borrowList=borrowMapper.getBorrowListLimit(map);
+    public List<Borrow> getBorrowList(Map<String,Object> map) {
+        List<Borrow> borrowList=borrowMapper.getBorrowList(map);
         return borrowList;
     }
 
@@ -34,25 +33,9 @@ public class BorrowServiceImpl implements BorrowService{
         return borrowMapper.getBorrowId(id);
     }
 
-    @Override
-    public Integer addBorrow(Borrow borrow) {
-        return borrowMapper.insertBorrow(borrow);
-    }
-
-    @Override
-    public Integer modifyBorrow(Borrow borrow) {
-        return borrowMapper.updateBorrow(borrow);
-    }
-
-    @Override
-    public Integer AddLoan(Borrow borrow) {
-        return borrowMapper.AddLoan(borrow);
-    }
 
     @Override
     public Integer updateLoan(Bid bid) {
         return borrowMapper.updateLoan(bid);
     }
-
-
 }

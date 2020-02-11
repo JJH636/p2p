@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baby.p2p.dao.User.UserMapper">
+    <!--UserInfo映射-->
+    <resultMap id="UserInfoMap" type="com.baby.p2p.pojo.UserInfo">
+        <result property="avatar" column="avatar"/>
+        <result property="realname" column="realname"/>
+        <result property="idCardNumber" column="id_card_number"/>
+        <result property="phoneNumber" column="phone_number"/>
+        <result property="incomeLevelId" column="income_level_id"/>
+        <result property="marriageId" column="marriage_id"/>
+        <result property="eduBackgroundId" column="edu_background_id"/>
+        <result property="houseConditionId" column="house_condition_id"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+    <!--用户基本信息获取-->
+    <select id="selectBabyUserInfo" parameterType="String" resultMap="UserInfoMap">
+        SELECT avatar,realname,id_card_number,phone_number,income_level_id,marriage_id,edu_background_id,house_condition_id,create_time
+        FROM t_user_info f WHERE account_id = #{accountId}
+    </select>
+</mapper>
