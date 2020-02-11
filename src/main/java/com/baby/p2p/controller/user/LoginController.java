@@ -135,9 +135,9 @@ public class LoginController {
 
             //新增用户信息
             UserInfo userInfo = new UserInfo();
-            userInfo.setAccount_id(userAccount.getId());
+            userInfo.setAccountId(userAccount.getId());
             userInfo.setAvatar("nobody.jpg");
-            userInfo.setCreate_time(new Date());
+            userInfo.setCreateTime(new Date());
             userInfoService.addUserInfo(userInfo);
 
             result.put("code","200");
