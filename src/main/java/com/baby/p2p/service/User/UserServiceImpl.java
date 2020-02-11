@@ -1,6 +1,6 @@
-package com.baby.p2p.service.user;
+package com.baby.p2p.service.User;
 
-import com.baby.p2p.dao.user.UserMapper;
+import com.baby.p2p.dao.User.UserMapper;
 import com.baby.p2p.pojo.UserInfo;
 import org.springframework.stereotype.Service;
 
