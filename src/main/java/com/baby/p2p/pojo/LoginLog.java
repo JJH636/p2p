@@ -1,8 +1,5 @@
 package com.baby.p2p.pojo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,9 +9,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("t_login_log")
 public class LoginLog {
-    @TableId(value = "id",type = IdType.AUTO)
     private Integer id;                  //id
     private String ip;                   //客户端ip地址
     private Date login_time;            //登录时间

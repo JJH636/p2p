@@ -1,7 +1,5 @@
 package com.baby.p2p.pojo;
 
-
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,7 +9,6 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("t_user_wallet")
 public class UserWallet {
     private String account_id;             //账户id
     private Integer available_amount;      //可用金额(单位：分)

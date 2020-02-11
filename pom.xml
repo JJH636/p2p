@@ -19,6 +19,12 @@
     </properties>
 
     <dependencies>
+        <!-- mybatis整合Springboot -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.1.1</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -32,12 +38,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-        <!-- mybatis整合Springboot -->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>1.1.1</version>
-        </dependency>
         <!-- START lombok 简化Java代码  START-->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -45,6 +45,8 @@
             <optional>true</optional>
         </dependency>
         <!-- END lombok 简化Java代码  END-->
+
+
         <!--MySql jdbc驱动-->
         <dependency>
             <groupId>mysql</groupId>
@@ -73,11 +75,6 @@
         </dependency>
         <!--=============END==============-->
         <!--START ==== Jedis所需要的依赖 ==== START-->
-        <!--集成redis-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-pool2</artifactId>
@@ -88,17 +85,8 @@
             <artifactId>jedis</artifactId>
             <version>2.7.2</version>
         </dependency>
-        <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>1.2.12</version>
-        </dependency>
+
         <!--END ==== Jedis所需要的依赖 ==== END-->
-        <dependency>
-        <groupId>com.alibaba</groupId>
-        <artifactId>fastjson</artifactId>
-        <version>1.2.47</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -110,25 +98,18 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
-        <!--mybatis-plus-->
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.0.5</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.47</version>
         </dependency>
-
-
-        <!--集成redis-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-data-redis</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>redis.clients</groupId>-->
-            <!--<artifactId>jedis</artifactId>-->
-        <!--</dependency>-->
-
+        <!-- START === Quartz所需要的依赖  === START-->
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>1.8.6</version>
+        </dependency>
+        <!-- END ===== Quartz所需要的依赖  ===== END-->
     </dependencies>
 
     <build>
@@ -136,28 +117,19 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                </configuration>
             </plugin>
         </plugins>
-
-        <!--这个元素描述了项目相关的所有资源路径列表，例如和项目相关的属性文件，这些资源被包含在最终的打包文件里。-->
         <resources>
+            <!-- mapper.xml文件在java目录下 -->
             <resource>
-                <!--   描述存放资源的目录，该路径相对POM路径-->
                 <directory>src/main/java</directory>
                 <includes>
                     <include>**/*.xml</include>
                 </includes>
-                <filtering>true</filtering>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>**/*</include>
-                </includes>
-                <filtering>true</filtering>
             </resource>
         </resources>
     </build>
-
-
 </project>

@@ -1,7 +1,6 @@
 package com.baby.p2p.dao.Bid;
 
 import com.baby.p2p.pojo.Bid;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
