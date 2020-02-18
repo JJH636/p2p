@@ -20,6 +20,86 @@ public class Bid {
         this.borrowId = borrowId;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getBorrowTitle() {
+        return borrowTitle;
+    }
+
+    public void setBorrowTitle(String borrowTitle) {
+        this.borrowTitle = borrowTitle;
+    }
+
+    public Integer getBidAmount() {
+        return bidAmount;
+    }
+
+    public void setBidAmount(Integer bidAmount) {
+        this.bidAmount = bidAmount;
+    }
+
+    public Integer getBidInterest() {
+        return bidInterest;
+    }
+
+    public void setBidInterest(Integer bidInterest) {
+        this.bidInterest = bidInterest;
+    }
+
+    public int getYearRate() {
+        return yearRate;
+    }
+
+    public void setYearRate(int yearRate) {
+        this.yearRate = yearRate;
+    }
+
+    public int getBorrowState() {
+        return borrowState;
+    }
+
+    public void setBorrowState(int borrowState) {
+        this.borrowState = borrowState;
+    }
+
+    public String getBidUserId() {
+        return bidUserId;
+    }
+
+    public void setBidUserId(String bidUserId) {
+        this.bidUserId = bidUserId;
+    }
+
+    public String getBidUsername() {
+        return bidUsername;
+    }
+
+    public void setBidUsername(String bidUsername) {
+        this.bidUsername = bidUsername;
+    }
+
+    public Date getBidTime() {
+        return bidTime;
+    }
+
+    public void setBidTime(Date bidTime) {
+        this.bidTime = bidTime;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
     private String borrowId;      //借款id
     private String borrowTitle;   //借款标题
     private Integer bidAmount;    //投标金额

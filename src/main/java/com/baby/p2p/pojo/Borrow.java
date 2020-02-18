@@ -10,6 +10,174 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Borrow {
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getBorrowUserId() {
+        return borrowUserId;
+    }
+
+    public void setBorrowUserId(String borrowUserId) {
+        this.borrowUserId = borrowUserId;
+    }
+
+    public String getBorrowUsername() {
+        return borrowUsername;
+    }
+
+    public void setBorrowUsername(String borrowUsername) {
+        this.borrowUsername = borrowUsername;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getRepaymentType() {
+        return repaymentType;
+    }
+
+    public void setRepaymentType(int repaymentType) {
+        this.repaymentType = repaymentType;
+    }
+
+    public int getBorrowType() {
+        return borrowType;
+    }
+
+    public void setBorrowType(int borrowType) {
+        this.borrowType = borrowType;
+    }
+
+    public int getBorrowState() {
+        return borrowState;
+    }
+
+    public void setBorrowState(int borrowState) {
+        this.borrowState = borrowState;
+    }
+
+    public String getBorrowStates() {
+        return borrowStates;
+    }
+
+    public void setBorrowStates(String borrowStates) {
+        this.borrowStates = borrowStates;
+    }
+
+    public Integer getBorrowAmount() {
+        return borrowAmount;
+    }
+
+    public void setBorrowAmount(Integer borrowAmount) {
+        this.borrowAmount = borrowAmount;
+    }
+
+    public int getYearRate() {
+        return yearRate;
+    }
+
+    public void setYearRate(int yearRate) {
+        this.yearRate = yearRate;
+    }
+
+    public int getRepaymentMonth() {
+        return repaymentMonth;
+    }
+
+    public void setRepaymentMonth(int repaymentMonth) {
+        this.repaymentMonth = repaymentMonth;
+    }
+
+    public int getBidNum() {
+        return bidNum;
+    }
+
+    public void setBidNum(int bidNum) {
+        this.bidNum = bidNum;
+    }
+
+    public Integer getTotalInterest() {
+        return totalInterest;
+    }
+
+    public void setTotalInterest(Integer totalInterest) {
+        this.totalInterest = totalInterest;
+    }
+
+    public Integer getCurrentBidAmount() {
+        return currentBidAmount;
+    }
+
+    public void setCurrentBidAmount(Integer currentBidAmount) {
+        this.currentBidAmount = currentBidAmount;
+    }
+
+    public Integer getCurrentBidInterest() {
+        return currentBidInterest;
+    }
+
+    public void setCurrentBidInterest(Integer currentBidInterest) {
+        this.currentBidInterest = currentBidInterest;
+    }
+
+    public Date getBidDeadline() {
+        return bidDeadline;
+    }
+
+    public void setBidDeadline(Date bidDeadline) {
+        this.bidDeadline = bidDeadline;
+    }
+
+    public int getBidDays() {
+        return bidDays;
+    }
+
+    public void setBidDays(int bidDays) {
+        this.bidDays = bidDays;
+    }
+
+    public Date getApplyTime() {
+        return applyTime;
+    }
+
+    public void setApplyTime(Date applyTime) {
+        this.applyTime = applyTime;
+    }
+
+    public Date getPublishTime() {
+        return publishTime;
+    }
+
+    public void setPublishTime(Date publishTime) {
+        this.publishTime = publishTime;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
     private String id;                  //id
     private String borrowUserId;    //借款人id
     private String borrowUsername;   //借款人用户名

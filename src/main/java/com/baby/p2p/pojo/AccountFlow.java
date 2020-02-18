@@ -18,4 +18,7 @@ public class AccountFlow {
     private Integer freeze_amount;        //(变化后)冻结金额(单位：分)
     private String remark;       //流水说明
     private Date create_time;    //创建日期
+
+    public AccountFlow(Object o, String id, Integer cheng, int i, Integer availableAmount, Integer freezeAmount, String s, Date date) {
+    }
 }

@@ -24,4 +24,72 @@
             </if>
         </trim>
     </select>
+
+    <select id="getBidByBidUserId" resultType="com.baby.p2p.pojo.Bid">
+        SELECT
+        id as id,
+        borrow_id as borrowId,
+        borrow_title as borrowTitle,
+        bid_amount as bidAmount,
+        bid_interest as bidInterest,
+        year_rate as yearRate,
+        borrow_state as borrowState,
+        bid_user_id as bidUserId,
+        bid_username as bidUsername,
+        bid_time as bidTime,
+        create_time as createTime
+        FROM t_bid
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="borrowId!=null and borrowId!=''">
+                and borrow_id=#{borrowId}
+            </if>
+            <if test="bidUserId!=null and bidUserId!=''">
+                and bid_user_id=#{bidUserId}
+            </if>
+        </trim>
+    </select>
+
+    <!--查询分页信息-->
+    <select id="getBidList" resultType="com.baby.p2p.pojo.Bid" parameterType="java.util.Map">
+        SELECT
+        id as id,
+        borrow_id as borrowId,
+        borrow_title as borrowTitle,
+        bid_amount as bidAmount,
+        bid_interest as bidInterest,
+        year_rate as yearRate,
+        borrow_state as borrowState,
+        bid_user_id as bidUserId,
+        bid_username as bidUsername,
+        bid_time as bidTime,
+        create_time as createTime
+        FROM t_bid
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="borrowStates!=null and borrowStates!=''">
+                <if test="borrowStates=='20,30,40,50'">
+                    borrow_state IN (20,30,40,50)
+                </if>
+                <if test="borrowStates=='20,30,40'">
+                    borrow_state IN (20,30,40)
+                </if>
+                <if test="borrowStates=='20,30'">
+                    borrow_state IN (20,30)
+                </if>
+                <if test="borrowStates=='40'">
+                    borrow_state IN (40)
+                </if>
+                <if test="borrowStates=='50'">
+                    borrow_state IN (50)
+                </if>
+            </if>
+            <if test="borrowState!=null">
+                borrow_state=#{borrowState}
+            </if>
+        </trim>
+        <if test="From!=null and pageSize!=null">
+            order by create_time DESC
+            LIMIT  #{From},#{pageSize}
+        </if>
+    </select>
+
 </mapper>

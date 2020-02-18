@@ -13,6 +13,7 @@
         <result property="houseConditionId" column="house_condition_id"/>
         <result property="createTime" column="create_time"/>
     </resultMap>
+
     <!--用户基本信息获取-->
     <select id="selectBabyUserInfo" parameterType="String" resultMap="UserInfoMap">
         SELECT avatar,realname,id_card_number,phone_number,income_level_id,marriage_id,edu_background_id,house_condition_id,create_time

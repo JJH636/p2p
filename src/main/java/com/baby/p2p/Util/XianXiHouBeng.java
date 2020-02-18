@@ -24,15 +24,15 @@ public class XianXiHouBeng {
         return monthIncome.doubleValue();
     }
 
-    public static Integer jia(double money,double moneyNum) {
+    public static Integer jia(String money, String moneyNum) {
         BigDecimal monthIncome = new BigDecimal(money).add(new BigDecimal(moneyNum));
         return monthIncome.intValue();
     }
-    public static Integer jian(double money,double moneyNum) {
+    public static Integer jian(String money, String moneyNum) {
         BigDecimal monthIncome = new BigDecimal(money).subtract(new BigDecimal(moneyNum));
         return monthIncome.intValue();
     }
-    public static Integer cheng(double money,double moneyNum) {
+    public static Integer cheng(String money, String moneyNum) {
         BigDecimal monthIncome = new BigDecimal(money).multiply(new BigDecimal(moneyNum));
         return monthIncome.intValue();
     }

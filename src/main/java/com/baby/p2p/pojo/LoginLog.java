@@ -10,6 +10,62 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LoginLog {
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getIp() {
+        return ip;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
+
+    public Date getLogin_time() {
+        return login_time;
+    }
+
+    public void setLogin_time(Date login_time) {
+        this.login_time = login_time;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public Integer getAccount_type() {
+        return account_type;
+    }
+
+    public void setAccount_type(Integer account_type) {
+        this.account_type = account_type;
+    }
+
+    public Integer getLogin_result() {
+        return login_result;
+    }
+
+    public void setLogin_result(Integer login_result) {
+        this.login_result = login_result;
+    }
+
+    public Date getCreate_time() {
+        return create_time;
+    }
+
+    public void setCreate_time(Date create_time) {
+        this.create_time = create_time;
+    }
+
     private Integer id;                  //id
     private String ip;                   //客户端ip地址
     private Date login_time;            //登录时间
